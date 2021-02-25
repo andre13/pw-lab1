@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Report</title>
+    </head>
+    <body>
+        <h1>Report</h1><br>
+        <h3> Endereços IP </h3>
+        <p>IP da minha máquina: <b>88.157.199.115</b> (obtido através de uma pesquisa por <i>"what is my ip"</i> no <a href="https://www.google.com">Google</a>).<br>
+        A imagem seguinte mostra a localização do IP (imagem obtida com recurso ao website <a href="https://whatismyipaddress.com/ip-lookup">whatismyipaddress.com</a>):</p>
+        <figure>
+            <img src="img/myIP.png"><br>
+            <figcpation>fig.1 - Localização do IP da minhas máquina</figcpation>
+        </figure>
+
+        <p>(O teste acima não foi possível fazer no telemóvel por não existirem dados móveis disponíveis)</p>
+
+        <br>
+
+        <p>IP do servidor heroku onde está alojado o website <a href="https://app-pweb.herokuapp.com/">app-pweb.herokuapp.com</a>: <b>54.170.150.88</b> (obtido através do comando 
+        <code> >tracert app-pweb.herokuapp.com </code> na linha de comandos windows). <br>
+        A imagem seguinte mostra a localização do IP (imagem obtida com recurso ao website <a href="https://whatismyipaddress.com/ip-lookup">whatismyipaddress.com</a>):</p>
+        <figure>
+            <img src="img/herokuIP.png"><br>
+            <figcpation>
+                fig.2 - Localização do IP do servidor heroku
+            </figcpation>
+        </figure>
+
+        <br><hr><br><br>
+
+        <h3> Percurso </h3>
+
+
+        <p>Para visualizar graficamente por onde passam os pacotes IP, até chegar ao servidor Heroku, foi utilizada a ferramenta <a href="https://geotraceroute.com/">GeoTraceroute</a>. <br>
+        As rotas registadas foram as seguintes:</p>
+        <ol>
+            <li><img src="img/flagPT.png" height="14" width="16"> PT - Prior Velho (0 km)</li>
+            <li><img src="img/flagPT.png" height="14" width="16"> PT - Lisboa (8 km)</li>
+            <li><img src="img/flagDE.png" height="14" width="16"> DE - Frankfurt (1879 km)</li>
+        </ol>
+        <figure>
+            <img src="img/geotraceroute.png"><br>
+            <figcpation>fig.3 - Mapa de rotas dos pacotes IP</figcpation>
+        </figure>
+
+
+        <br><hr><br><br>
+
+        <h3> Inspect </h3>
+        
+
+        <p>Com a funcionalidade <i>Inspect</i> do browser, acedendo ao separador <i>Network</i>, é possível visualizar o conteúdo recebido do servidor, após o cliente ter enviado <br>
+        uma mensagem HTTP GET. Um dos ficheiros recebidos, corresponde ao ficheiro HTML da página web, é do tipo document e tem o tamanho de 1.1 KB. O outro <br>
+        conteúdo é a imagem "wordcloud" e é do tipo png. Para além da informação anterior, é possível visualizar o tempo gasto.</p>
+        <figure>
+            <img src="img/inspect_myapp.png"><br>
+            <figcpation>fig.4 - Inspect Network do website <a href="https://app-pweb.herokuapp.com/">app-pweb.herokuapp.com</a></figcpation>
+        </figure>
+
+        <br>
+
+        <p>Após clique no hiperlink existente no website, são descarregados 37 ficheiros, como mostra a seguinte imagem:</p>
+        <figure>
+            <img src="img/inspect_hiperlink.png"><br>
+            <figcpation>fig.5 - Inspect Network do Hiperlink</figcpation>
+        </figure>
+
+
+        <br>
+
+        <p>Voltando à aplicação alojado no heroku, dos ficheiro recebidos, um é do tipo <i>document</i> (ficheiro da página HTML) e o outro é do tipo <i>png</i> (imagem wordcloud). O ficheiro do tipo <i>document</i> <br>
+        teve um tempo de espera de 53.39 ms e um tempo de descarregamento de 0.78 ms. Por sua vez, a imagem demorou 24 <span>&#181;</span>s a ser descarregada.</p>
+        <p>Ao selecionar cada um dos ficheiro podemos visualizar o seguinte:</p>
+        
+        <p> - No ficheiro <b>app-pweb.herokuapp.com</b></p>
+
+        <ul style="list-style-type:none;">
+            <li><b>Header:</b>
+                <ul>
+                    <li>General
+                        <ul>
+                            <li><u>Request URL:</u> https://app-pweb.herokuapp.com/</li>
+                            <li><u>Request Method:</u> GET</li>
+                            <li><u>Status Code:</u> 200 OK</li>
+                            <li><u>Remote Address:</u> 172.21.252.25:8080</li>
+                            <li><u>Referrer Policy:</u> strict-origin-when-cross-origin</li>
+                        </ul>
+                    </li>
+                    <li>Response Headers
+                        <ul>
+                            <li><u>Connection:</u> keep-alive</li>
+                            <li><u>Content-Type:</u> text/html; charset=UTF-8</li>
+                            <li><u>Date:</u> Wed, 24 Feb 2021 21:06:15 GMT</li>
+                            <li><u>Server:</u> Apache</li>
+                            <li><u>Transfer-Encoding:</u> chunked</li>
+                            <li><u>Via:</u> 1.1 vegur</li>
+                        </ul>
+                    </li>
+                    <li>Request Headers
+                        <ul>
+                            <li><u>Accept:</u> text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</li>
+                            <li><u>Accept-Encoding:</u> gzip, deflate, br</li>
+                            <li><u>Accept-Language:</u> pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7</li>
+                            <li><u>Cache-Control:</u> max-age=0</li>
+                            <li><u>Connection:</u> keep-alive</li>
+                            <li><u>Host:</u> app-pweb.herokuapp.com</li>
+                            <li><u>Sec-Fetch-Dest:</u> document</li>
+                            <li><u>Sec-Fetch-Mode:</u> navigate</li>
+                            <li><u>Sec-Fetch-Site:</u> none</li>
+                            <li><u>Sec-Fetch-User:</u> ?1</li>
+                            <li><u>Upgrade-Insecure-Requests:</u> 1</li>
+                            <li><u>User-Agent:</u> Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36</li>
+                        </ul>
+                    </li>
+                </ul> 
+            </li>
+            <li><b>Preview: </b> 
+                <ul>
+                    <li>Pré-visualização da página web</li>
+                </ul>
+            </li>
+            <li><b>Timing: </b> 
+                <ul>
+                    <li>Queued at 0</li>
+                    <li>Started at 2.85 ms</li>
+                    <li>Resource Scheduling
+                    	<ul>
+                    		<li>Queueing 2.85 ms</li>
+                    	</ul>
+                    </li>
+                    <li>Connection Start
+                    	<ul>
+                    		<li>Stalled 1.49 ms</li>
+                    		<li>Proxy negotiation 0.58 ms</li>
+                    	</ul>
+                    </li>
+                    <li>Request/Response
+                    	<ul>
+                    		<li>Response sent 0.14 ms</li>
+                    		<li>Wating (TTFB) 53.39 ms</li>
+                    		<li>Content Download 0.78 ms</li>
+                    	</ul>
+                    </li>
+                    <li>Total 58.65 ms</li>
+                </ul>
+            </li>
+        </ul>
+
+
+        <p> - No ficheiro <b>wordcloud.png</b></p>
+
+        <ul style="list-style-type:none;">
+            <li><b>Header:</b>
+                <ul>
+                    <li>General
+                        <ul>
+                            <li><u>Request URL: </u>https://app-pweb.herokuapp.com/img/wordcloud.png</li>
+                            <li><u>Request Method: </u>GET</li>
+                            <li><u>Status Code: </u>u>200 OK (from memory cache)</li>
+                            <li><u>Remote Address: </u>u>172.21.252.25:8080</li>
+                            <li><u>Referrer Policy: </u>strict-origin-when-cross-origin</li>
+                        </ul>
+                    </li>
+                    <li>Response Headers
+                        <ul>
+                            <li><u>Accept-Ranges: </u>bytes</li>
+                            <li><u>Connection: </u>keep-alive</li>
+                            <li><u>Content-Length: </u>u>46966</li>
+                            <li><u>Content-Type: </u>image/png</li>
+                            <li><u>Date: </u>Wed, 24 Feb 2021 21:05:36 GMT</li>
+                            <li><u>Etag: </u>u>"b776-5bba3e275fd40"</li>
+                            <li><u>Last-Modified: </u>Thu, 18 Feb 2021 22:30:37 GMT</li>
+                            <li><u>Server: </u>Apache</li>
+                            <li><u>Via: </u>u>1.1 vegur</li>
+                        </ul>
+                    </li>
+                    <li>Request Headers
+                        <ul>
+                            <li><u>Accept: </u>image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8</li>
+                            <li><u>Accept-Encoding: </u>gzip, deflate, br</li>
+                            <li><u>Accept-Language: </u>pt-PT,pt;q=0.9,en-US;q=0.8,en;q=0.7</li>
+                            <li><u>Cache-Control: </u>no-cache</li>
+                            <li><u>Connection: </u>keep-alive</li>
+                            <li><u>Host: </u>app-pweb.herokuapp.com</li>
+                            <li><u>Pragma: </u>no-cache</li>
+                            <li><u>Referer: </u>https://app-pweb.herokuapp.com/</li>
+                            <li><u>Sec-Fetch-Dest: </u>image</li>
+                            <li><u>Sec-Fetch-Mode: </u>no-cors</li>
+                            <li><u>Sec-Fetch-Site: </u>same-origin</li>
+                            <li><u>User-Agent: </u>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36</li>
+                        </ul>
+                    </li>
+                </ul> 
+            </li>
+            <li><b>Preview: </b> 
+                <ul>
+                    <li>Pré-visualização dimagem wordcloud</li>
+                </ul>
+            </li>
+            <li><b>Timing: </b> 
+                <ul>
+                    <li>Queued at 71.45 ms</li>
+                    <li>Started at 71.45 ms</li>
+                    <li>Connection Start
+                    	<ul>
+                    		<li>Stalled 1.49 <span>&#181;</span>s</li>
+                    	</ul>
+                    </li>
+                    <li>Request/Response
+                    	<ul>
+                    		<li>Content Download 24 <span>&#181;</span>s</li>
+                    	</ul>
+                    </li>
+                    <li>Total 78 <span>&#181;</span>s</li>
+                </ul>
+            </li>
+        </ul>
+
+        <br><br><br>
+    </body>
+</html>
