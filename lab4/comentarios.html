@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="André Abreu">
+    <meta name="keywords" content="Londres">
+    <meta name="description" content="Website sobre Londres">
+    
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Londres - Comentários</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Londres</h1>
+        <img src="images/londres.png" alt="Cidade de Londres" border="1">
+    </header>
+    <br>
+    <nav>
+        <a href="index.html">Introdução</a>
+        <a href="local.html">| Localização</a>
+        <a href="multimedia.html">| Multimédia</a>
+        <a href="info.html">| Informações</a>
+        <a href="quizz.html">| Quizz</a>
+        <b><a href="comentarios.html">| Comentários</a></b>
+        <a href="html5-css.html">| HTML5</a>
+        <a href="../index.html">| Home</a>
+    </nav>
+
+    <section>
+        <h3>Comentários</h3>
+
+        <form method="post" action="mailto:abreu.andre13@gmail.com">
+            <fieldset>
+                <label for="q1">1. Esta foi a primeira vez que visitou o nosso site?</label><br>
+                <input type="radio" name="q1" id="q1_a" value="sim">
+                <label for="q1_a">Sim</label>
+                <input type="radio" name="q1" id="q1_b" value="nao">
+                <label for="q1_b">Não</label>
+                <br><br>
+                <label for="q2">2. De que forma(s) teve conhecimento do nosso site?</label><br>
+                <input type="checkbox" id="q2_a" name="q2" value="Pesquisa na web">
+                <label for="q2_a"> Pesquisa na web</label><br>
+                <input type="checkbox" id="q2_b" name="q2" value="Recomendado por um amigo(a)/familiar/colega">
+                <label for="q2_b"> Recomendado por um amigo(a)/familiar/colega</label><br>
+                <input type="checkbox" id="q2_c" name="q2" value="Anúncio">
+                <label for="q2_c"> Anúncio</label><br>
+                <input type="checkbox" id="q2_d" name="q2" value="Recomendado por uma agente de turismo">
+                <label for="q2_d"> Recomendado por uma agênte de turismo</label><br>
+                <label for="q2_e">Outro: </label>
+                <input type="text" id="q2" name="q2_e" size="35">
+                <br><br>
+                <label for="q3">3. Encontrou o que precisava?</label><br>
+                <input type="radio" name="q3" id="q3_a">
+                <label for="q3_a">Sim, tudo</label>
+                <br>
+                <input type="radio" name="q3" id="q3_b">
+                <label for="q3_b">Sim, uma parte</label>
+                <br>
+                <input type="radio" name="q3" id="q3_c">
+                <label for="q3_c">Não, nada</label>
+                <br><br>
+                <label for="q4">4. Se não econtrou tudo o que precisava, diga-nos quais as informações que estava à
+                    procura:</label><br>
+                <textarea id="q4" name="q4" rows="5" cols="40" placeholder="Escreva aqui o seu texto..."></textarea>
+                <br><br>
+                <label for="q5">5. É fácil encontrar informações no site?</label><br>
+                <input type="radio" name="q5" id="q5_a">
+                <label for="q5_a">Muito fácil</label>
+                <br>
+                <input type="radio" name="q5" id="q5_b">
+                <label for="q5_b">Fácil</label>
+                <br>
+                <input type="radio" name="q5" id="q5_c">
+                <label for="q5_c">Pouco fácil</label>
+                <br>
+                <input type="radio" name="q5" id="q5_d">
+                <label for="q5_d">Difícil</label>
+                <br>
+                <input type="radio" name="q5" id="q5_e">
+                <label for="q5_e">Muito difícil</label>
+                <br><br>
+                <label for="q6">6. Em que medida as informações do site são compreensíveis?</label><br>
+                <input type="radio" name="q6" id="q6_a">
+                <label for="q6_a">Bem compreensíveis</label>
+                <br>
+                <input type="radio" name="q6" id="q6_b">
+                <label for="q6_b">Compremensíveis</label>
+                <br>
+                <input type="radio" name="q6" id="q6_c">
+                <label for="q6_c">Pouco compreensíveis</label>
+                <br>
+                <input type="radio" name="q6" id="q6_d">
+                <label for="q6_d">Incompreensíveis</label>
+                <br>
+                <input type="radio" name="q6" id="q6_e">
+                <label for="q6_e">Muito incompreensíveis</label>
+                <br><br>
+                <label for="q7">7. Numa escala de 1 a 10, em que 1 é Completamente Insatisfeito e 10 é
+                    Extremamente Satisfeito, como avalia os seguintes aspetos quanto à qualidade do website?</label><br>
+                <label for="q7_a">Imagem do website</label>
+                <input type="range" id="q7" name="q7_a" value="0" min="1" max="10" list="number"
+                    oninput="q7_aV.value = parseInt(q7_a.value)" />
+                <output name="q7_aV" for="q7_a">1</output>
+                <br>
+                <label for="q7_b">Conteúdos escritos</label>
+                <input type="range" id="q7" name="q7_b" value="0" min="1" max="10" list="number"
+                    oninput="q7_bV.value = parseInt(q7_b.value)" />
+                <output name="q7_bV" for="q7_b">1</output>
+                <br>
+                <label for="q7_c">Suportes visuais (vídeos, imagens)</label>
+                <input type="range" id="q7" name="q7_c" value="0" min="1" max="10" list="number"
+                    oninput="q7_cV.value = parseInt(q7_c.value)" />
+                <output name="q7_cV" for="q7_c">1</output>
+                <br>
+                <label for="q7_d">Links de Ligações Web</label>
+                <input type="range" id="q7" name="q7_d" value="0" min="1" max="10" list="number"
+                    oninput="q7_dV.value = parseInt(q7_d.value)" />
+                <output name="q7_dV" for="q7_d">1</output>
+                <br>
+                <label for="q7_e">Qualidade da informação divulgada</label>
+                <input type="range" id="q7" name="q7_e" value="0" min="1" max="10" list="number"
+                    oninput="q7_eV.value = parseInt(q7_e.value)" />
+                <output name="q7_eV" for="q7_e">1</output>
+                <br>
+                <label for="q7_f">Entretenimento / curiosidades</label>
+                <input type="range" id="q7" name="q7_f" value="0" min="1" max="10" list="number"
+                    oninput="q7_fV.value = parseInt(q7_f.value)" />
+                <output name="q7_fV" for="q7_f">1</output>
+                <br><br>
+                <label for="q8">8. Qual a probabilidade de visitar o site novamente?</label><br>
+                <input type="radio" name="q6" id="q6_a">
+                <label for="q8_a">Muito provável</label>
+                <br>
+                <input type="radio" name="q6" id="q8_b">
+                <label for="q8_b">Provável</label>
+                <br>
+                <input type="radio" name="q6" id="q8_c">
+                <label for="q8_c">Não sei</label>
+                <br>
+                <input type="radio" name="q6" id="q8_d">
+                <label for="q8_d">Improvável</label>
+                <br>
+                <input type="radio" name="q6" id="q8_e">
+                <label for="q8_e">Muito improvável</label>
+                <br><br>
+                <label for="q9">9. Recomendaria o nosso site a outra pessoa?</label><br>
+                <input type="radio" name="q6" id="q6_a">
+                <label for="q9_a">Definitivamente sim</label>
+                <br>
+                <input type="radio" name="q6" id="q9_b">
+                <label for="q9_b">Provavelmente sim</label>
+                <br>
+                <input type="radio" name="q6" id="q9_c">
+                <label for="q9_c">Não sei</label>
+                <br>
+                <input type="radio" name="q6" id="q9_d">
+                <label for="q9_d">Provavelmente não</label>
+                <br>
+                <input type="radio" name="q6" id="q9_e">
+                <label for="q9_e">Definitivamente não</label>
+                <br><br>
+                <label for="q10">10. O nosso objetivo é responder às suas necessidades e expetativas. Neste sentido,
+                    deixe-nos as suas sugestões de melhoria:</label><br>
+                <textarea id="q10" name="q10" rows="10" cols="110"
+                    placeholder="Escreva aqui a sua opinião..."></textarea>
+                <br><br>
+
+                <input type="hidden" id="custId" name="custId" value="3487">
+                <input type="submit" value="Submit">
+                <br><br>
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <br><br>
+    <footer>
+        André Abreu, a21003338, ULHT, 2º ano
+    </footer>
+
+</body>
+
+</html>

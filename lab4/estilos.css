@@ -1,0 +1,28 @@
+*{ /* universal */ 
+    font-family: Times New Roman;
+    background-color:whitesmoke;
+}
+
+h1 { /* tipo */
+    color: brown;
+}
+
+.important { /* important */
+    color: brown;
+}
+
+#unico { /* id */
+    background-color: aqua;
+}
+
+a[target=_blank] { /* atributo */
+    background-color: yellow;
+}
+
+div:hover { /* pseudo-classe */
+    background-color: violet;
+}
+
+p::first-letter { /* pseudo-elemento */
+    font-size: 2em;
+}
