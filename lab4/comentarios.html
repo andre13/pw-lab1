@@ -7,29 +7,34 @@
     <meta name="author" content="André Abreu">
     <meta name="keywords" content="Londres">
     <meta name="description" content="Website sobre Londres">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="estilos.css" />
-    <title>Londres - Comentários</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans&display=swap" rel="stylesheet">    
+    
+    <title>Londres - Comentários</title>
 
 </head>
 
 <body>
 
     <header>
-        <h1>Londres</h1>
+        <h1 id="main_title">Londres</h1>
         <img src="images/londres.png" alt="Cidade de Londres" border="1">
     </header>
     <br>
     <nav>
-        <a href="index.html">Introdução</a>
-        <a href="local.html">| Localização</a>
-        <a href="multimedia.html">| Multimédia</a>
-        <a href="info.html">| Informações</a>
-        <a href="quizz.html">| Quizz</a>
-        <b><a href="comentarios.html">| Comentários</a></b>
-        <a href="html5-css.html">| HTML5</a>
-        <a href="../index.html">| Home</a>
+        <a class="separator" data-icon="lightbulb_outline" href="index.html">Introdução</a>
+        <a class="separator" data-icon="place" href="local.html">Localização</a>
+        <a class="separator" data-icon="movie_creation" href="multimedia.html">Multimédia</a>
+        <a class="separator" data-icon="info" href="info.html">Informações</a>
+        <a class="separator" data-icon="question_answer" href="quizz.html">Quizz</a>
+        <a class="separator" data-icon="insert_comment" id="active_menu_tab" href="comentarios.html">Comentários</a>
+        <a class="separator" data-icon="public" href="html5-css.html">HTML5</a>
+        <a class="separator" data-icon="home" href="../index.html">Home</a>
     </nav>
 
     <section>
@@ -182,7 +187,7 @@
     </section>
 
     <br><br>
-    <footer>
+    <footer id="signature">
         André Abreu, a21003338, ULHT, 2º ano
     </footer>
 

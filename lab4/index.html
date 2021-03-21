@@ -7,72 +7,82 @@
     <meta name="author" content="André Abreu">
     <meta name="keywords" content="Londres">
     <meta name="description" content="Website sobre Londres">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="estilos.css" />
-    <title>Londres</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <title>Londres</title>
 
 </head>
 
 <body>
 
     <header>
-        <h1>Londres</h1>
+        <h1 id="main_title">Londres</h1>
         <img src="images/londres.png" alt="Cidade de Londres" border="1">
     </header>
     <br>
     <nav>
-        <b><a href="index.html">Introdução</a></b>
-        <a href="local.html">| Localização</a>
-        <a href="multimedia.html">| Multimédia</a>
-        <a href="info.html">| Informações</a>
-        <a href="quizz.html">| Quizz</a>
-        <a href="comentarios.html">| Comentários</a>
-        <a href="html5-css.html">| HTML5</a>
-        <a href="../index.html">| Home</a>
+        <a class="separator" data-icon="lightbulb_outline" id="active_menu_tab" href="index.html">Introdução</a>
+        <a class="separator" data-icon="place" href="local.html">Localização</a>
+        <a class="separator" data-icon="movie_creation" href="multimedia.html">Multimédia</a>
+        <a class="separator" data-icon="info" href="info.html">Informações</a>
+        <a class="separator" data-icon="question_answer" href="quizz.html">Quizz</a>
+        <a class="separator" data-icon="insert_comment" href="comentarios.html">Comentários</a>
+        <a class="separator" data-icon="public" href="html5-css.html">HTML5</a>
+        <a class="separator" data-icon="home" href="../index.html">Home</a>
     </nav>
 
     <main>
         <section>
             <h3>Introdução</h3>
-            <p><b>Londres</b> (em inglês: London, AFI: [ˈlʌndən]) é a capital da Inglaterra e do Reino Unido.
-                Por dois milênios, foi um grande povoado e sua história remonta à sua fundação pelos romanos, quando
-                foi nomeada Londínio. O centro de Londres, a antiga City of London, também conhecida como <i>The Square
+            <div id="descritivo">
+                <p><b>Londres</b> (em inglês: London, AFI: [ˈlʌndən]) é a capital da Inglaterra e do Reino Unido.<br>
+                    Por dois milênios, foi um grande povoado e sua história remonta à sua fundação pelos romanos, quando
+                    foi nomeada Londínio. O centro de Londres, a antiga City of London, também conhecida como <i>The Square
                     Mile</i>
-                ("a milha quadrada") ou <i>The City</i>, mantém suas fronteiras medievais. Pelo menos desde o século
-                XIX, o
-                nome "Londres" se refere à metrópole desenvolvida em torno desse núcleo.Hoje, a maior parte dessa
-                conurbação
-                constitui a região da Grande Londres,cuja área administrativatem seu próprio prefeito eleito e
-                assembleia.
-                <a href="https://pt.wikipedia.org/wiki/Londres">[1]</a>
-            </p>
+                    ("a milha quadrada") ou <i>The City</i>, mantém suas fronteiras medievais. Pelo menos desde o século
+                    XIX, o
+                    nome "Londres" se refere à metrópole desenvolvida em torno desse núcleo.Hoje, a maior parte dessa
+                    conurbação
+                    constitui a região da Grande Londres,cuja área administrativatem seu próprio prefeito eleito e
+                    assembleia.
+                    <a href="https://pt.wikipedia.org/wiki/Londres">[1]</a>
+                </p>                    
+            </div>
 
-            <p style="font-size:22px">&#9992;&#127753;&#127979;&#127963;&#127984;&#127905;&#128561;&#128525;</p>
+            <br>
+            <p>História contada por emojis:</p>
+            <div class="emoji">&#9992;&#127753;&#127979;&#127963;&#127984;&#127905;&#128561;&#128525;</div>
         </section>
 
         <hr>
 
         <section>
             <pre>
-                    <b>Londres</b> é uma das cidades mais visitadas da Europa, e os motivos são bem conhecidos. Da icónica  <u>Ponte da Torre</u> 
-                    a monumentos incríveis como <u>Big Ben</u> ou o <u>Palácio de Buckingham</u>, passando pelo inevitável <u>Castelo de Windsor</u>, a 
-                    verdade é que não faltam atrações em <b>Londres</b>. E isto sem falar do incontornável <u>London Eye</u>, que proporciona vistas
-                    incríveis sobre a cidade. É uma cidade capaz de surpreender tanto aqueles que a visitam pela primeira vez, como os 
-                    apaixonados por ela e que não podem deixar de visitá-la com frequência.
-                </pre>
+                <b>Londres</b> é uma das cidades mais visitadas da Europa, e os motivos são bem conhecidos. Da icónica  <u>Ponte da Torre</u> 
+                a monumentos incríveis como <u>Big Ben</u> ou o <u>Palácio de Buckingham</u>, passando pelo inevitável <u>Castelo de Windsor</u>, a 
+                verdade é que não faltam atrações em <b>Londres</b>. E isto sem falar do incontornável <u>London Eye</u>, que proporciona vistas
+                incríveis sobre a cidade. É uma cidade capaz de surpreender tanto aqueles que a visitam pela primeira vez, como os 
+                apaixonados por ela e que não podem deixar de visitá-la com frequência.
+            </pre>
         </section>
 
         <hr>
 
-        <section>
-            <p>Londres é uma das mais visitadas cidades da Europa, e os motivos são bem conhecidos. Da icónica
+        <article>
+            <p>Londres é uma das mais visitadas cidades da Europa e os motivos são bem conhecidos. Da icónica
                 Ponte da Torre de Londres a monumentos incríveis como Big Ben ou o Palácio de Buckingham, passando
                 pelo inevitável Castelo de Windsor, a verdade é que não faltam atrações em Londres. E isto sem falar
                 do incontornável London Eye, que proporciona vistas incríveis sobre a cidade. É uma cidade capaz de
                 surpreender tanto aqueles que a visitam pela primeira vez, como os apaixonados por ela e que não podem
                 deixar de visitá-la com frequência.</p>
-        </section>
+            <section><p>Explore o nosso site e apaixone-se também por Londres!</p></section>
+        </article>
 
         <hr>
 
@@ -102,7 +112,7 @@
     </main>
 
     <br><br>
-    <footer>
+    <footer id="signature">
         André Abreu, a21003338, ULHT, 2º ano
     </footer>
 

@@ -1,28 +1,250 @@
-*{ /* universal */ 
-    font-family: Times New Roman;
-    background-color:whitesmoke;
+/* 
+=============
+  universal 
+=============
+*/
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 99%;
 }
 
-h1 { /* tipo */
-    color: brown;
+/*
+======== 
+  tipo
+========
+*/
+body {
+    background: rgb(250, 250, 250);
 }
 
-.important { /* important */
-    color: brown;
+h3 {
+    color: black;
+    font-size: 25px;
 }
 
-#unico { /* id */
-    background-color: aqua;
+h5 {
+    color: black;
+    font-size: 15px;
 }
 
-a[target=_blank] { /* atributo */
-    background-color: yellow;
+nav {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
 }
 
-div:hover { /* pseudo-classe */
-    background-color: violet;
+iframe {
+    border: 0px;
 }
 
-p::first-letter { /* pseudo-elemento */
+span {
+    display: block;
+}
+
+span.floating-box {
+    display: inline-block;
+}
+
+
+/*
+==========
+  Classe
+==========
+*/
+.material-icons.menu { 
+    font-size: 19px;
+}
+
+.emoji {
+    font-size: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+.citacao {
+    font-family: 'Benne', serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/*
+====== 
+  id
+======
+*/
+#main_title {
+    background-color: brown;
+    color: aliceblue;
+    font-family: fantasy;
+    font-size: 45px;
+}
+
+#active_menu_tab {
+    color: steelblue;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#signature {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: darkgray;
+}
+
+
+/*
+============ 
+  atributo 
+============
+*/
+[target="_blank"] {
+    font-weight: bold;
+}
+
+
+/*
+=================
+  pseudo-classe 
+=================
+*/
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: navy;
+    text-decoration: none;
+}
+
+a:hover {
+    color: silver;
+    text-decoration: none;
+}
+
+a:active {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+/* reset */
+input[type="reset"]:hover {
+    border: 1px solid steelblue;
+    color: steelblue;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+input[type="reset"]:active {
+    border: 1px solid blue;
+    color: blue;
+    background-color: transparent;
+}
+
+/* tables */
+table {
+    text-align: center; 
+}
+
+th, td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* html5 table */
+table.html5 thead:first-child {
+    background: goldenrod;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+table.html5 td:nth-child(1) {
+    background: palegoldenrod;
+}
+
+table.html5 td:nth-child(3) {
+    text-align: left;
+}
+
+table.html5 tr:nth-child(2n) {
+    background: silver;
+}
+
+table.html5 tfoot {
+    background: grey;
+    font-weight: bolder;
+    color: white;
+}
+
+/* infomation table */
+table.info thead:first-child {
+    background: goldenrod;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+table.info tbody tr:nth-child(1) {
+    background: palegoldenrod;
+}
+
+table.info tfoot {
+    background: white;
+    color: black;
+    font-weight: normal;
+}
+
+
+
+/*
+===================
+  pseudo-elemento 
+===================
+*/
+div p::first-letter {
     font-size: 2em;
+}
+
+#descritivo::first-line {
+    font-size: large;
+}
+
+[data-icon]::before {
+    content: attr(data-icon);
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-size: 1em;
+
+    display: inline-block;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+     
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.separator::after {
+    content: "|";
+    margin: 15px;
+    color: gainsboro;
+}
+
+article > p {
+    color: grey;
+}
+
+div ~ p {
+    font-family: fantasy;
+    color: orangered;
 }

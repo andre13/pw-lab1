@@ -7,29 +7,34 @@
     <meta name="author" content="André Abreu">
     <meta name="keywords" content="Londres">
     <meta name="description" content="Website sobre Londres">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="estilos.css" />
-    <title>Londres - Informações</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans&display=swap" rel="stylesheet">    
+    
+    <title>Londres - Quizz</title>
 
 </head>
 
 <body>
 
     <header>
-        <h1>Londres</h1>
+        <h1 id="main_title">Londres</h1>
         <img src="images/londres.png" alt="Cidade de Londres" border="1">
     </header>
     <br>
     <nav>
-        <a href="index.html">Introdução</a>
-        <a href="local.html">| Localização</a>
-        <a href="multimedia.html">| Multimédia</a>
-        <a href="info.html">| Informações</a>
-        <b><a href="quizz.html">| Quizz</a></b>
-        <a href="comentarios.html">| Comentários</a>
-        <a href="html5-css.html">| HTML5</a>
-        <a href="../index.html">| Home</a>
+        <a class="separator" data-icon="lightbulb_outline" href="index.html">Introdução</a>
+        <a class="separator" data-icon="place" href="local.html">Localização</a>
+        <a class="separator" data-icon="movie_creation" href="multimedia.html">Multimédia</a>
+        <a class="separator" data-icon="info" href="info.html">Informações</a>
+        <a class="separator" data-icon="question_answer" id="active_menu_tab" href="quizz.html">Quizz</a>
+        <a class="separator" data-icon="insert_comment" href="comentarios.html">Comentários</a>
+        <a class="separator" data-icon="public" href="html5-css.html">HTML5</a>
+        <a class="separator" data-icon="home" href="../index.html">Home</a>
     </nav>
 
     <section>
@@ -38,38 +43,42 @@
         <form method="post" action="mailto:abreu.andre13@gmail.com" autocomplete="on">
             <fieldset>
                 <legend>Dados Pessoais:</legend>
-                <br>
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" size="34" maxlength="50" required autofocus>
-                <br><br>
-                <label for="surname">Apelido:</label>
-                <input type="text" id="surname" name="surname" size="34" maxlength="50" required>
-                <br><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" size="34" maxlength="50" required>
-                <br><br>
 
+                <label for="name">Nome:</label>
+                <span><input type="text" id="name" name="name" size="34" maxlength="50" required autofocus></span>
+
+                <label for="surname">Apelido:</label>
+                <span><input type="text" id="surname" name="surname" size="34" maxlength="50" required></span>
+
+                <label for="email">Email:</label>
+                <span><input type="email" id="email" name="email" size="34" maxlength="50" required></span>
             </fieldset>
             <br>
             <fieldset>
                 <legend>Quiz sobre Londres:</legend>
                 <br>
                 <label for="q1">Qual dos seguintes é um dos pratos mais famosos de Londres?</label><br>
-                <input type="radio" name="q1" id="q1_a">
-                <label for="q1_a">Fish and chips</label>
+                <span><input type="radio" name="q1" id="q1_a">
+                    <label for="q1_a">Fish and chips</label>
+                </span>
+                <span>
+                    <input type="radio" name="q1" id="q1_b">
+                    <label for="q1_b">Pizza</label>
+                </span>
+                <span>
+                    <input type="radio" name="q1" id="q1_c">
+                    <label for="q1_c">Sushi</label>
+                </span>
+
                 <br>
-                <input type="radio" name="q1" id="q1_b">
-                <label for="q1_b">Pizza</label>
+                <label for="q2">Londres é a capital de que país?</label>
+                <span><input type="text" id="q2" name="q2" placeholder="Ex.: Portugal"></span>
+
                 <br>
-                <input type="radio" name="q1" id="q1_c">
-                <label for="q1_c">Sushi</label>
-                <br><br>
-                <label for="q2">Londres é a capital de que país?</label><br>
-                <input type="text" id="q2" name="q2" placeholder="Ex.: Portugal">
-                <br><br>
                 <label for="q3">Quantos aeroportos existem em Londres?</label><br>
-                <input type="number" id="q3" name="q3" min="5" max="20" step="5">
-                <br><br>
+                <span><input type="number" id="q3" name="q3" min="5" max="20" step="5"></span>
+
+                <br>
                 <label for="q4">Quais destes museus ficam em Londres?</label><br>
                 <select id="q4" name="q4">
                     <option value="q4_a">Museu Britânico, Museu dos Coches e Museu do Louvre</option>
@@ -77,16 +86,19 @@
                     <option value="q4_c">Museu do Louvre, National Gallery e Science Museum</option>
                     <option value="q4_d">National Gallery, Science Museum e Museu Britânico</option>
                 </select>
-                <br><br>
+                <br>
+                
+                <br>
                 <label for="q5">Como se chama a rainha de Inglaterra?</label><br>
-                <input type="text" id="q5" list="queens" />
+                <span><input type="text" id="q5" list="queens" /></span>
                 <datalist id="queens">
                     <option value="Mariah I"></option>
                     <option value="Maria II"></option>
                     <option value="Maria Elizabeth I"></option>
                     <option value="Elizabeth II"></option>
                 </datalist>
-                <br><br>
+                
+                <br>
                 <label for="q6">Londres tem mais de 192 museus. Quantos deles são museus nacionais?</label><br>
                 <input type="range" id="q6" name="q6" value="0" min="0" max="15" list="number"
                     oninput="q6V.value = parseInt(q6.value)" />
@@ -97,20 +109,33 @@
                     <option>15</option>
                 </datalist>
                 <output name="q6V" for="q6">0</output>
-                <br><br>
+                
+                <br>
                 <label for="q7">Qual ou quais dos nomes se refere(m) ao relógio mais famoso de Londres?</label><br>
-                <input type="checkbox" id="q7_a" name="q7" value="Big Ben">
-                <label for="q7_a"> Big Ben</label><br>
-                <input type="checkbox" id="q7_b" name="q7" value="Big Bang">
-                <label for="q7_b"> Big Bang</label><br>
-                <input type="checkbox" id="q7_c" name="q7" value="Big Watch">
-                <label for="q7_c"> Big Watch</label><br>
-                <input type="checkbox" id="q7_d" name="q7" value="The Clock Tower">
-                <label for="q7_d"> The Clock Tower</label>
-                <br><br>
+                <span>
+                    <input type="checkbox" id="q7_a" name="q7" value="Big Ben">
+                    <label for="q7_a"> Big Ben</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="q7_b" name="q7" value="Big Bang">
+                    <label for="q7_b"> Big Bang</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" id="q7_c" name="q7" value="Big Watch">
+                    <label for="q7_c"> Big Watch</label><br>
+                </span>
+                <span>
+                    <input type="checkbox" id="q7_d" name="q7" value="The Clock Tower">
+                    <label for="q7_d"> The Clock Tower</label>
+                </span>
+                
+                <br>
                 <label for="q8">Qual a data de inauguração da roda gigante London Eye?</label><br>
-                <input type="date" id="q8" name="q8" min="1900-01-01">
-                <br><br>
+                <span>
+                    <input type="date" id="q8" name="q8" min="1900-01-01">
+                </span>
+                
+                <br>
                 <label for="q9">Qual a cor dos famosos autocarros de Londres?</label><br>
                 <input type="color" id="q9" value="#000000" list="colors" />
                 <datalist id="colors">
@@ -120,10 +145,13 @@
                     <option>#00bb00</option>
                     <option>#ffff00</option>
                 </datalist>
-                <br><br>
+                <br>
+                
+                <br>
                 <label for="q10">Partilhe conosco imagens Londres que goste:</label><br>
-                <input type="file" id="q10" name="q10" multiple>
-                <br><br>
+                <span><input type="file" id="q10" name="q10" multiple></span>
+                
+                <br>
                 <label for="q11">Qual a sua opinião sobre a cidade de Londres?</label><br>
                 <textarea id="q11" name="q11" rows="10" cols="30" placeholder="Escreva aqui o seu texto..."></textarea>
 
@@ -131,15 +159,14 @@
             </fieldset>
 
             <br>
-            <input type="reset" value="Limpar Formulário">
-            <br><br>
-            <input type="image" src="images/submit.png" alt="Submit" border="1">
+            <span class="floating-box"><input type="reset" value="Limpar Formulário"></span>
+            <span class="floating-box"><input type="image" src="images/submit.png" alt="Submit"></span>
 
         </form>
     </section>
 
     <br><br>
-    <footer>
+    <footer id="signature">
         André Abreu, a21003338, ULHT, 2º ano
     </footer>
 
