@@ -21,11 +21,17 @@ body {
 h3 {
     color: black;
     font-size: 25px;
+    font-size:2vw
 }
 
 h5 {
     color: black;
     font-size: 15px;
+    font-size:2vw
+}
+
+img {
+    max-width: 100%;
 }
 
 iframe {
@@ -83,12 +89,6 @@ span.floating-box {
     text-decoration: underline;
 }
 
-#signature {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: white;
-    background-color: darkgray;
-}
 
 
 /*
@@ -239,25 +239,44 @@ div ~ p {
 }
 
 
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 60% auto 10%;
+    grid-template-rows: 500px auto auto auto 30px;
+    grid-template-areas: ". header header ."
+                         ". menu menu ."
+                         ". main aside_top ."
+                         ". main aside_down ."
+                         ". footer footer .";
+    grid-gap: 10px;
+    padding: 10px;
+}
+  
+  /* .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+} */
+
 .header { 
     grid-area: header;
+    background-color: brown;
 }
 
 .nav { 
-    grid-area: menu;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 17px;
-    overflow: hidden;
     background-color: #333;
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .nav a {
-    float: left;
-    display: block;
+    padding: 14px;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
 }
 
 .nav a:hover {
@@ -269,28 +288,24 @@ div ~ p {
     grid-area: main;
 }
 
-.aside { 
-    grid-area: aside; 
+.aside_top { 
+    grid-area: aside_top;
+    background-color: darkmagenta;
+    text-align: center;
+}
+
+.aside_down { 
+    grid-area: aside_down;
+    background: brown;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer { 
     grid-area: footer; 
-    padding: 30px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu main main main aside aside'
-      'menu footer footer footer footer footer';
-    grid-gap: 10px;
-    padding: 10px;
-}
-  
-  .grid-container > div {
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 30px;
+    padding: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: white;
+    background-color: darkgray;
 }
