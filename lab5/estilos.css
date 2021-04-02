@@ -434,8 +434,8 @@ div ~ p {
 }
 
 .picture1 {
-    width: 280px;
-    height: 180px;
+    width: 250px;
+    height: 150px;
     transition: width 0.5s, height 0.5s;
   }
   
@@ -445,38 +445,28 @@ div ~ p {
 }
 
 .picture2 {
-    width: 280px;
-    height: 180px;
+    width: 300px;
+    height: 200px;
   }
   
 .picture2:hover {
-    width: 300px;
-    height: 200px;
     transform: rotate(30deg)
 }
 
 .picture3 {
-    width: 280px;
-    height: 180px;
+    width: 300px;
+    height: 200px;
   }
   
 .picture3:hover {
-    width: 300px;
-    height: 200px;
     transform: scaleX(-1);
 }
 
 .picture4 {
-    width: 280px;
-    height: 180px;
+    width: 300px;
+    height: 200px;
   }
   
 .picture4:hover {
-    width: 300px;
-    height: 200px;
     border-radius: 50px;
   }
-
-.opacity {
-    opacity: 0.5;
-}
