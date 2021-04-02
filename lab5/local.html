@@ -7,7 +7,7 @@
     <meta name="author" content="André Abreu">
     <meta name="keywords" content="Londres">
     <meta name="description" content="Website sobre Londres">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="estilos.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,14 +19,14 @@
 
 </head>
 
-<body>
+<body class="grid-container">
 
-    <header>
+    <header class="header">
         <h1 id="main_title">Londres</h1>
         <img src="images/londres.png" alt="Cidade de Londres" border="1">
     </header>
     <br>
-    <nav>
+    <nav class="nav">
         <a class="separator" data-icon="lightbulb_outline" href="index.html">Introdução</a>
         <a class="separator" data-icon="place" id="active_menu_tab" href="local.html">Localização</a>
         <a class="separator" data-icon="movie_creation" href="multimedia.html">Multimédia</a>
@@ -37,19 +37,38 @@
         <a class="separator" data-icon="home" href="../index.html">Home</a>
     </nav>
 
-    <section>
-        <h3>Localização</h3>
+    <main class="main">
+        <section class="box">
+            <h3>Localização</h3>
 
-        <p>Londres, a capital do Reino Unido, localiza-se na Grã-Bretanha, mais precisamente em Inglaterra, na
-            região do Sudeste. Situa-se a 100 km da foz do rio Tamisa, estendendo-se ao longo das suas duas margens.</p>
+            <p>Londres, a capital do Reino Unido, localiza-se na Grã-Bretanha, mais precisamente em Inglaterra, na
+                região do Sudeste. Situa-se a 100 km da foz do rio Tamisa, estendendo-se ao longo das suas duas margens.</p>
 
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2535490.175450025!2d-0.7291991896247303!3d51.64034156988191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondres%2C%20Reino%20Unido!5e0!3m2!1spt-PT!2spt!4v1614814233974!5m2!1spt-PT!2spt"
-            width="800" height="560" allowfullscreen="" loading="lazy"></iframe>
-    </section>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2535490.175450025!2d-0.7291991896247303!3d51.64034156988191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondres%2C%20Reino%20Unido!5e0!3m2!1spt-PT!2spt!4v1614814233974!5m2!1spt-PT!2spt"
+                width=100% height="560" allowfullscreen="" loading="lazy">
+            </iframe>
+        </section>
+    </main>
+
+    <aside class="extra">
+        <div class="box right_content">
+            <h4>O quê?</h4>
+            <p>Londres é a capital da Inglaterra e do Reino Unido.</p>
+            <h4>Onde?</h4>
+            <p>Londres está localizada na região do sudeste de Inglaterra.</p>
+            <h4>Como?</h4>
+            <p>A maioria dos aeroportos da Europa têm conexão com a cidade de Londres.</p>
+        </div>
+        <div class="box right_images" id="img_aside">
+            <img src="images/aside_img1.jpeg" alt="Big Ben"><br>
+            <img src="images/aside_img2.jpeg" alt="London Eye"><br>
+            <img src="images/aside_img3.jpeg" alt="Red Bus"><br>
+        </div>
+    </aside>
 
     <br><br>
-    <footer id="signature">
+    <footer class="footer">
         André Abreu, a21003338, ULHT, 2º ano
     </footer>
 

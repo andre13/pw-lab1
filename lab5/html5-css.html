@@ -7,7 +7,7 @@
     <meta name="author" content="André Abreu">
     <meta name="keywords" content="Londres">
     <meta name="description" content="Website sobre Londres">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="estilos.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,14 +19,14 @@
 
 </head>
 
-<body>
+<body class="grid-container">
 
-    <header>
+    <header class="header">
         <h1 id="main_title">Londres</h1>
         <img src="images/londres.png" alt="Cidade de Londres" border="1">
     </header>
     <br>
-    <nav>
+    <nav class="nav">
         <a class="separator" data-icon="lightbulb_outline" href="index.html">Introdução</a>
         <a class="separator" data-icon="place" href="local.html">Localização</a>
         <a class="separator" data-icon="movie_creation" href="multimedia.html">Multimédia</a>
@@ -37,9 +37,12 @@
         <a class="separator" data-icon="home" href="../index.html">Home</a>
     </nav>
     
-    <main>
-        <h3>HTML5 e CSS</h3>
-        <section>
+    <main class="main">
+        <div class="box">
+            <h3>HTML5 e CSS</h3>
+        </div>
+        
+        <section class="box">
             <h4>HTML 5</h4>
             <p>HTML5 (Hypertext Markup Language, versão 5) é uma linguagem de marcação para a World Wide Web, que introduziu novos elementos semânticos.</p>
             <table class="html5">
@@ -119,117 +122,131 @@
                     </tr>
                 </tfoot>
             </table>
-
-            <br>
-
-            <section>
-                <h4>CSS</h4>
-                <p>Cascading Style Sheets (CSS) é uma folha de estilos que permite estilizar uma página web (cores, fontes, espaçamento, etc.)</p>
-                <table class="html5">
-                    <thead>
-                        <tr>
-                            <th>Tipos de Seletores</th>
-                            <th>Utilizado?</th>
-                            <th>Descrição da Utilização</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>universal</td>
-                            <td><i class="material-icons">done</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>tipo</td>
-                            <td><i class="material-icons">done</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>classe</td>
-                            <td><i class="material-icons">done</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>id</td>
-                            <td><i class="material-icons">clear</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>atributo</td>
-                            <td><i class="material-icons">clear</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>pseudo-classe</td>
-                            <td><i class="material-icons">clear</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                            <td>pseudo-elemento</td>
-                            <td><i class="material-icons">clear</i></td>
-                            <td></td>
-                       </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>TOTAL:</th>
-                            <th>6 / 12</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
-
-            <br>
-
-            <section>
-                <table class="html5">
-                    <thead>
-                        <tr>
-                            <th>Combinadores de Seletores</th>
-                            <th>Utilizado?</th>
-                            <th>Descrição da Utilização</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Seletores descendentes</td>
-                            <td><i class="material-icons">done</i></td>
-                            <td></td>
-                       </tr>
-                       <tr>
-                           <td>Seletores filhos</td>
-                           <td><i class="material-icons">done</i></td>
-                           <td></td>
-                       </tr>
-                       <tr>
-                           <td>Seletores adjacentes</td>
-                           <td><i class="material-icons">done</i></td>
-                           <td></td>
-                       </tr>
-                       <tr>
-                           <td>Seletores imediatamente</td>
-                           <td><i class="material-icons">clear</i></td>
-                           <td></td>
-                       </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>TOTAL:</th>
-                            <th>6 / 12</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
         </section>
 
+        <br>
 
+        <section class="box">
+            <h4>CSS</h4>
+            <p>Cascading Style Sheets (CSS) é uma folha de estilos que permite estilizar uma página web (cores, fontes, espaçamento, etc.)</p>
+            <table class="html5">
+                <thead>
+                    <tr>
+                        <th>Tipos de Seletores</th>
+                        <th>Utilizado?</th>
+                        <th>Descrição da Utilização</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>universal</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>tipo</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>classe</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id</td>
+                        <td><i class="material-icons">clear</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>atributo</td>
+                        <td><i class="material-icons">clear</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pseudo-classe</td>
+                        <td><i class="material-icons">clear</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pseudo-elemento</td>
+                        <td><i class="material-icons">clear</i></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>TOTAL:</th>
+                        <th>6 / 12</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <br>
+
+        <section class="box">
+            <table class="html5">
+                <thead>
+                    <tr>
+                        <th>Combinadores de Seletores</th>
+                        <th>Utilizado?</th>
+                        <th>Descrição da Utilização</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Seletores descendentes</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Seletores filhos</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Seletores adjacentes</td>
+                        <td><i class="material-icons">done</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Seletores imediatamente</td>
+                        <td><i class="material-icons">clear</i></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>TOTAL:</th>
+                        <th>6 / 12</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </section>
     </main>
 
+    <aside class="extra">
+        <div class="box right_content">
+            <h4>O quê?</h4>
+            <p>Londres é a capital da Inglaterra e do Reino Unido.</p>
+            <h4>Onde?</h4>
+            <p>Londres está localizada na região do sudeste de Inglaterra.</p>
+            <h4>Como?</h4>
+            <p>A maioria dos aeroportos da Europa têm conexão com a cidade de Londres.</p>
+        </div>
+        <div class="box right_images" id="img_aside">
+            <img src="images/aside_img1.jpeg" alt="Big Ben"><br>
+            <img src="images/aside_img2.jpeg" alt="London Eye"><br>
+            <img src="images/aside_img3.jpeg" alt="Red Bus"><br>
+        </div>
+    </aside>
+
     <br><br>
-    <footer id="signature">
+    <footer class="footer">
         André Abreu, a21003338, ULHT, 2º ano
     </footer>
-
 </body>
 
 </html>
